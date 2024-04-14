@@ -1,0 +1,43 @@
+@mixin textTruncate($clamp) {
+  display: -webkit-box;
+  -webkit-line-clamp: $clamp;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin gradient($deg, $firt, $second) {
+  background: linear-gradient($deg, $firt 0%, $second 100%);
+}
+
+@mixin displayFlex($display, $align, $justify) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin imgContainer($height, $borderRadius) {
+  width: 100%;
+  height: $height;
+  overflow: hidden;
+  border-radius: $borderRadius;
+  position: relative;
+  margin: 0;
+  .img-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $borderRadius;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@mixin filter($filter, $type, $adjust) {
+  $filter: $type($adjust);
+}

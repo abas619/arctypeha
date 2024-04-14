@@ -1,0 +1,27 @@
+/*#region ----------------- Page Header */
+.page-header {
+  margin-top: 150px;
+  .inner {
+    @include displayFlex(flex, center, center);
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 992px) {
+  .page-header {
+    margin-top: 150px;
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .page-header {
+    margin-top: 130px;
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/*#endregion -------------- Page Header */

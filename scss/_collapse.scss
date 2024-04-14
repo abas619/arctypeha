@@ -1,0 +1,116 @@
+/*#region ----------------- Collapse */
+
+.collapse-item {
+  margin-top: 12px;
+  .btn-collapse {
+    padding: 0.6rem 1rem;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    border: none;
+    text-align: right;
+    color: $primary;
+    border-radius: 4px 4px 0 0;
+    .icon {
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include displayFlex(flex, center, center);
+      font-size: 20px;
+      color: $textGrey;
+      transform: rotate(0);
+      transition: all 0.3s ease-in-out;
+      background-color: $background_grey;
+      border-radius: 50%;
+      .mdi {
+        display: flex;
+      }
+    }
+    .text {
+      small {
+        font-size: 16px;
+        font-weight: 400;
+        color: $textGrey;
+        margin-right: 10px;
+      }
+    }
+    &.collapsed {
+      border-radius: 4px;
+      .icon {
+        transform: rotate(90deg);
+      }
+    }
+    &.type-2 {
+      font-size: 20px;
+      font-weight: 600;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid $borderColor;
+      .icon {
+        width: 24px;
+        height: 24px;
+        top: 14px;
+        left: 15px;
+      }
+    }
+  }
+  .result-info {
+    border: 1px solid $borderColor;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 250px;
+    align-items: center;
+    .progress-content {
+      padding-left: 20px;
+      @include displayFlex(flex, center, space-around);
+      .circle {
+        flex: 0 0 33.33%;
+        width: 33.33%;
+        margin: 0 auto;
+        text-align: center;
+        h6 {
+          font-size: 14px;
+          text-align: center;
+          margin: 5px 0 0 0;
+        }
+      }
+    }
+    .image-content {
+      img {
+        width: 100%;
+        border-radius: 4px;
+      }
+    }
+  }
+  ul {
+    background-color: $background_grey;
+    padding: 10px 15px;
+    li {
+      a {
+        font-size: 14px;
+        color: $textDark;
+        display: block;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse-item {
+    .result-info {
+      grid-template-columns: 100%;
+      .image-content {
+        margin-top: 15px;
+      }
+      .progress-content {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+/*#endregion -------------- Collapse */

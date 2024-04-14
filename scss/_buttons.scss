@@ -1,0 +1,122 @@
+/*#region ----------------- Buttons */
+.btn {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  box-shadow: none;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  &:hover,
+  &:focus {
+    box-shadow: none !important;
+  }
+  .mdi {
+    font-size: 1.5rem;
+    display: flex;
+  }
+  &.btn-small {
+    padding: 0.6rem 1rem;
+    .mdi {
+      font-size: 1.2rem;
+    }
+  }
+  &:disabled {
+    background-color: $dis_button !important;
+    cursor: wait;
+    &:hover,
+    &:focus {
+      background-color: $dis_button !important;
+    }
+  }
+}
+.icon-right {
+  padding-right: 3rem !important;
+  .mdi {
+    position: absolute;
+    right: 0.86rem;
+    top: 2px;
+  }
+}
+.icon-left {
+  padding-left: 3rem !important;
+  .mdi {
+    position: absolute;
+    left: 0.86rem;
+    top: 2px;
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: white;
+  border-color: $primary;
+  &:hover,
+  &:focus {
+    background-color: white;
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary;
+  color: white;
+  border-color: $secondary;
+  &:hover,
+  &:focus {
+    background-color: white;
+    color: $secondary;
+    border-color: $secondary;
+  }
+}
+.btn-primary-outline {
+  background-color: white;
+  color: $primary;
+  border-color: $primary;
+  &:hover,
+  &:focus {
+    background-color: rgba($color: $primary, $alpha: 0.1);
+    color: $primary;
+    border-color: $primary;
+  }
+}
+.btn-secondary-outline {
+  background-color: transparent;
+  color: $secondary;
+  border-color: $secondary;
+  &:hover,
+  &:focus {
+    background-color: rgba($color: $secondary, $alpha: 0.1);
+    color: $secondary;
+    border-color: $secondary;
+  }
+}
+
+.btn-link {
+  font-size: 14px;
+  font-weight: 600;
+  &.primary {
+    color: $primary;
+  }
+  &.secondary {
+    color: $secondary;
+  }
+  .mdi {
+    position: relative;
+    top: 4px;
+    margin-left: 8px;
+    font-size: 18px;
+  }
+  &:hover {
+    &.primary {
+      color: darken($color: $primary, $amount: 8);
+    }
+    &.secondary {
+      color: darken($color: $secondary, $amount: 8);
+    }
+  }
+}
+
+/*#endregion -------------- Buttons */

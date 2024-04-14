@@ -1,0 +1,146 @@
+/*#region ----------------- Footer */
+.footer {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  .footer-inner {
+    border-top: 1px solid $borderColor;
+    padding-top: 40px;
+  }
+  .logo {
+    .thumb {
+      a {
+        @include displayFlex(flex, center, flex-start);
+        img {
+          width: 60px;
+        }
+        h1 {
+          color: $textDark;
+          margin-bottom: 0;
+          font-size: 26px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .desc {
+      margin: 10px 0;
+      p {
+        text-align: justify;
+        color: $textDark;
+        margin-bottom: 0;
+      }
+    }
+    .btns-group {
+      @include displayFlex(flex, center, center);
+      .btn {
+        margin: 5px;
+      }
+    }
+  }
+  .contact-info {
+    background-color: #eee;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 15px 0 30px 0;
+    ul {
+      @include displayFlex(flex, center, center);
+      flex-wrap: wrap;
+      li {
+        margin: 5px 10px;
+        a {
+          font-size: 16px;
+          font-weight: 400;
+          color: $textDark;
+          text-align: center;
+          display: inline-block;
+          .mdi {
+            font-size: 20px;
+            margin-left: 5px;
+            color: $textGrey;
+            position: relative;
+            top: 3px;
+          }
+        }
+      }
+    }
+  }
+  .email-content {
+    h5 {
+      color: $textDark;
+      margin-bottom: 2px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: $textGrey;
+    }
+    .email {
+      position: relative;
+      .input {
+        width: 100%;
+        border-radius: 4px;
+        font-size: 16px;
+        color: $textDark;
+        padding: 8px 15px 8px 80px;
+        border: 1px solid $textDark;
+        text-align: right;
+        height: 43px;
+      }
+      .btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 43px;
+      }
+    }
+  }
+  .social-icons {
+    ul {
+      @include displayFlex(flex, center, center);
+      flex-wrap: wrap;
+      li {
+        margin: 8px;
+        a {
+          @include displayFlex(flex, center, center);
+          font-size: 34px;
+          width: 34px;
+          height: 34px;
+          color: $textDark;
+          transition: all 0.3s ease-in-out;
+          img,
+          svg {
+            width: 34px;
+            height: 34px;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover {
+            color: $secondary;
+            svg {
+              fill: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+  .certificate {
+    margin-top: 20px;
+    ul {
+      @include displayFlex(flex, center, center);
+      margin: 10px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    .logo {
+      .btns-group {
+        flex-direction: column;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- Footer */

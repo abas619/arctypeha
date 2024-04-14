@@ -1,0 +1,126 @@
+/*#region ----------------- General */
+@import url(../css/fontface.css);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none !important;
+}
+body {
+  font-family: $bodyFont !important;
+  font-weight: 400;
+  direction: rtl;
+  margin: 0;
+  background-color: $background_grey;
+  text-align: right;
+  font-size: 1rem;
+}
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+  line-height: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+strong,
+span,
+p {
+  font-family: $bodyFont !important;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 25px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  display: block;
+}
+a {
+  text-decoration: none !important;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+::selection {
+  background-color: $primary;
+  color: white;
+}
+
+.fixed-position {
+  overflow: hidden;
+}
+
+/*#endregion -------------- General */
