@@ -1,0 +1,86 @@
+/*#region ----------------- Blogs */
+.blog-swiper-section {
+  margin: 70px 0;
+}
+.card-blog {
+  .card-inner {
+    display: block;
+  }
+  .thumb {
+    @include imgContainer(220px, 8px);
+  }
+  .info {
+    margin-top: 20px;
+    .date {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: $textDark;
+      display: flex;
+      align-items: center;
+      color: $textGrey;
+      .mdi {
+        font-size: 18px;
+        margin-left: 5px;
+        color: $textSilver;
+      }
+    }
+    .name {
+      font-size: 18px;
+      color: $textDark;
+      margin-bottom: 5px;
+      @include textTruncate(1);
+      transition: all 0.3s ease-in-out;
+    }
+    .desc {
+      font-size: 14px;
+      color: $textGrey;
+      margin-bottom: 0;
+      @include textTruncate(2);
+    }
+  }
+  &:hover {
+    .info {
+      .name {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .card-blog {
+    .thumb {
+      height: 160px;
+    }
+    .info {
+      .name {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .card-blog {
+    .info {
+      .name {
+        font-size: 14px;
+      }
+      .desc {
+        font-size: 13px;
+        line-height: 20px;
+      }
+      .date {
+        font-size: 13px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .card-blog {
+    .thumb {
+      height: 120px;
+    }
+  }
+}
+
+/*#endregion -------------- Blogs */

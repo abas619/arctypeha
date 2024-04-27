@@ -3,7 +3,7 @@
   margin: 40px 0;
   .section-inner {
     background-color: white;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 30px;
     box-shadow: 0 5px 40px -1px rgba($color: #000000, $alpha: 0.08);
   }
@@ -65,18 +65,18 @@
 .questions-section {
   .section-inner {
     background-color: white;
-    border-radius: 4px;
-    padding: 20px;
+    border-radius: 8px;
+    // padding: 20px;
     box-shadow: 0 5px 40px -1px rgba($color: #000000, $alpha: 0.08);
   }
   .question-header {
     @include displayFlex(flex, center, space-between);
-    border-bottom: 1px solid $borderColor;
-    padding-bottom: 10px;
+    padding: 15px 20px;
+    height: 78px;
     .title {
       h4 {
         font-size: 18px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
         color: $textDark;
         @include textTruncate(1);
       }
@@ -95,12 +95,12 @@
       @include displayFlex(flex, center, flex-end);
     }
     .countdown-timer {
-      text-align: left;
-      padding-left: 15px;
+      text-align: center;
       .clock-timer {
         font-size: 16px;
         font-weight: 600;
         color: $textDark;
+        text-align: center;
         span {
           font-size: 14px;
           font-weight: 400;
@@ -113,22 +113,11 @@
 .questions-list {
   .question-item {
     margin: 20px 0;
-    display: none;
+    padding: 0 20px;
     animation: swipeLeftsmall 0.3s linear;
+    @include displayFlex(none, center, space-between);
     .info {
-      display: grid;
-      grid-template-columns: 48px auto;
-      align-items: center;
-    }
-    .number {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background-color: $primary;
-      color: white;
-      @include displayFlex(flex, center, center);
-      font-size: 16px;
-      font-weight: 600;
+      padding-left: 20px;
     }
     .name {
       font-size: 18px;
@@ -136,28 +125,34 @@
       color: $primary;
     }
     .btns-questions {
-      margin-top: 20px;
+      // margin-top: 20px;
       @include displayFlex(flex, center, center);
-      // flex-wrap: wrap;
       .btn-answer {
         background-color: $background_grey;
-        border-radius: 4px;
         border: 1px solid $borderColor;
-        font-size: 16px;
+        border-left: none;
+        font-size: 15px;
         font-weight: 400;
-        padding: 10px;
-        margin: 4px;
+        padding: 12px;
         transition: all 0.2s ease-in-out;
+        width: 80px;
         &.active {
           background-color: $secondary;
           color: white;
           border-color: $secondary;
           font-weight: 600;
         }
+        &:first-child {
+          border-radius: 0 8px 8px 0;
+        }
+        &:last-child {
+          border-radius: 8px 0 0 8px;
+          border-left: 1px solid $borderColor;
+        }
       }
     }
     &.active {
-      display: block;
+      display: flex;
     }
   }
 }
@@ -165,7 +160,7 @@
 .questions-btns-action {
   @include displayFlex(flex, center, center);
   border-top: 1px solid $borderColor;
-  padding-top: 20px;
+  padding: 20px;
   .btn-next,
   .btn-prev {
     margin: 5px;
@@ -182,7 +177,7 @@
 .test-result-section {
   .section-inner {
     background-color: white;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 20px;
     box-shadow: 0 5px 40px -1px rgba($color: #000000, $alpha: 0.08);
   }
@@ -212,47 +207,11 @@
     margin-top: 30px;
     background-color: $background_grey;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 8px;
     p {
       text-align: justify;
     }
   }
-}
-
-circle-progress::part(base) {
-  width: 80px;
-  height: 80px;
-}
-circle-progress::part(value) {
-  stroke-width: 5px;
-  stroke: black;
-}
-
-circle-progress::part(circle) {
-  stroke: #ddd;
-  stroke-width: 5px;
-}
-
-circle-progress::part(text-value) {
-  font-weight: 800;
-  font-size: 20px;
-  fill: black;
-}
-circle-progress::part(text-max) {
-  font-weight: 400;
-  font-size: 18px;
-  fill: black;
-}
-
-circle-progress.test-circle-progress::part(base) {
-  width: 110px;
-  height: 110px;
-}
-circle-progress.color-green::part(value) {
-  stroke: $success;
-}
-circle-progress.color-red::part(value) {
-  stroke: $error;
 }
 
 @media (max-width: 1400px) {
@@ -270,23 +229,28 @@ circle-progress.color-red::part(value) {
   }
 }
 @media (max-width: 992px) {
-  circle-progress.test-circle-progress::part(base) {
-    width: 90px;
-    height: 90px;
+  .questions-list {
+    .question-item {
+      flex-direction: column;
+      .name {
+        font-size: 16px;
+      }
+      .btns-questions {
+        margin-top: 20px;
+        .btn-answer {
+          font-size: 14px;
+          width: 70px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 768px) {
   .questions-section {
     .question-header {
-      flex-direction: column;
-      .actions-group,
+      padding: 10px 15px;
+      height: 68px;
       .title {
-        flex: 0 0 100%;
-        width: 100%;
-      }
-      .title {
-        text-align: center;
-        margin-bottom: 10px;
         h4 {
           font-size: 16px;
         }
@@ -305,28 +269,8 @@ circle-progress.color-red::part(value) {
       }
     }
   }
-  .questions-list {
-    .question-item {
-      .name {
-        font-size: 16px;
-      }
-      .number {
-        font-size: 13px;
-        width: 34px;
-        height: 34px;
-      }
-      .btns-questions {
-        flex-wrap: wrap;
-        .btn-answer {
-          font-size: 14px;
-          flex: 1 0 30%;
-          width: 30%;
-          // margin: 0;
-        }
-      }
-    }
-  }
   .questions-btns-action {
+    padding: 10px;
     .btn-next,
     .btn-prev {
       flex: 1 0 33.33%;
@@ -334,21 +278,20 @@ circle-progress.color-red::part(value) {
       font-size: 14px;
     }
   }
-  circle-progress::part(base) {
-    width: 60px;
-    height: 60px;
-  }
 }
-@media (max-width: 575px) {
-  .tips-section {
-    .btns-action {
-      .btn {
-        width: 100%;
+
+@media (max-width: 450px) {
+  .questions-list {
+    .question-item {
+      .btns-questions {
+        .btn-answer {
+          font-size: 12px;
+          width: 60px;
+          font-weight: 600;
+        }
       }
     }
   }
-  circle-progress.test-circle-progress::part(base) {
-    width: 70px;
-    height: 70px;
-  }
 }
+
+/*#endregion -------------- Test */

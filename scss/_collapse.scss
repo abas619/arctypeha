@@ -10,7 +10,7 @@
     border: none;
     text-align: right;
     color: $primary;
-    border-radius: 4px 4px 0 0;
+    border-radius: 8px 8px 0 0;
     .icon {
       width: 48px;
       height: 48px;
@@ -37,7 +37,7 @@
       }
     }
     &.collapsed {
-      border-radius: 4px;
+      border-radius: 8px;
       .icon {
         transform: rotate(90deg);
       }
@@ -57,16 +57,15 @@
   }
   .result-info {
     border: 1px solid $borderColor;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 8px 8px;
     border-top: none;
-    padding: 20px;
     display: grid;
-    grid-template-columns: auto 250px;
+    grid-template-columns: 250px auto;
     align-items: center;
     .progress-content {
-      padding-left: 20px;
+      padding: 20px;
       @include displayFlex(flex, center, space-around);
-      .circle {
+      .progress-item {
         flex: 0 0 33.33%;
         width: 33.33%;
         margin: 0 auto;
@@ -74,14 +73,14 @@
         h6 {
           font-size: 14px;
           text-align: center;
-          margin: 5px 0 0 0;
+          margin: 10px 0 0 0;
         }
       }
     }
     .image-content {
       img {
         width: 100%;
-        border-radius: 4px;
+        // border-radius: 4px;
       }
     }
   }

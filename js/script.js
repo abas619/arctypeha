@@ -81,25 +81,17 @@ if (document.querySelector(".btn-basket") !== null) {
   });
 }
 
+// For Question List
 if (document.querySelector(".progress-level") !== null) {
   const progressLevel = document.querySelector(".progress-level");
-  let currentValue = parseInt(progressLevel.getAttribute("value"));
-  let currentMax = parseInt(progressLevel.getAttribute("max"));
-  let totalQuestions = document.querySelectorAll(".question-item");
-  // let btnNextQuestion = document.getElementById("next-question");
-  function showCurrentQuestion(n) {
-    currentValue += n; // یا هر مقدار دلخواه دیگر
-    if (currentValue > currentMax) {
-      currentValue = currentMax; // حداکثر مقدار را تنظیم می‌کنیم
-    } else if (currentValue < 1) {
-      currentValue = 1; // حداقل مقدار را تنظیم می‌کنیم
-    }
-    progressLevel.setAttribute("value", currentValue.toString());
-    updateActiveQuestion(); // برای به‌روزرسانی کلاس active
-  }
+  var currentValue = parseInt(progressLevel.getAttribute("valuenow"));
+  var currentMax = parseInt(progressLevel.getAttribute("valuemax"));
+  var totalQuestions = document.querySelectorAll(".question-item");
+  var number_Questions = document.querySelector(".question-number");
 
   function updateActiveQuestion() {
     totalQuestions.forEach(function (question, index) {
+      number_Questions.textContent = currentValue;
       if (index === currentValue - 1) {
         question.classList.add("active");
       } else {
@@ -114,8 +106,58 @@ if (document.querySelector(".progress-level") !== null) {
           "#next-question"
         ).innerHTML = `<i class="mdi mdi-arrow-left"></i>سوال بعدی`;
       }
+
+      // } else {
+      //   document.getElementById("prev-question").style.display = "block";
+      // }
     });
   }
+}
+function updateProgressBar() {
+  const progressBar = document.getElementById("progress-bar");
+  const percentage = (currentValue / currentMax) * 100;
+  progressBar.style.width = `${percentage > 100 ? 100 : percentage}%`;
+  if (currentValue === 1) {
+    document.getElementById("prev-question").style.display = "none";
+    console.log("first");
+  } else {
+    document.getElementById("prev-question").style.display = "block";
+  }
+}
+function increaseProgress() {
+  if (currentValue < currentMax) {
+    currentValue++;
+    updateProgressBar();
+    updateActiveQuestion();
+  }
+}
+function decreaseProgress() {
+  if (currentValue > 1) {
+    currentValue--;
+    updateProgressBar();
+    updateActiveQuestion();
+  }
+}
+
+if (document.querySelector(".progress-level") !== null) {
+  updateProgressBar();
+}
+
+// For Progress Bar Horizontal
+
+function updateProgressBarHorizontal() {
+  const progress_horizontal = document.querySelectorAll(".progress-horizontal");
+  progress_horizontal.forEach((prh, index) => {
+    const progress_bar = prh.querySelector(".progress-bar");
+    let currentValue = parseInt(prh.getAttribute("valuenow"));
+    let currentMax = parseInt(prh.getAttribute("valuemax"));
+    const percentage = (currentValue / currentMax) * 100;
+    progress_bar.style.height = `${percentage > 100 ? 100 : percentage}%`;
+  });
+}
+
+if (document.querySelector(".progress-horizontal") !== null) {
+  updateProgressBarHorizontal();
 }
 
 // Countdown Timer

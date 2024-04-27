@@ -2,9 +2,24 @@
 .page-title {
   margin-bottom: 32px;
   .title-inner {
+    @include displayFlex(flex, center, space-between);
   }
   h2 {
+    font-size: 24px;
     color: $textDark;
+    margin-bottom: 0;
+  }
+  .btns-action {
+    .btn-link {
+      font-size: 16px;
+      color: $textDark;
+      .mdi {
+        margin-right: 5px;
+      }
+      &:hover {
+        color: $secondary;
+      }
+    }
   }
 }
 /*#endregion -------------- Page Title */

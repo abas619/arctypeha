@@ -18,29 +18,29 @@ const swiperHome = new Swiper(".swiper-home", {
   },
 });
 
-// const swiperSpecialThumb = new Swiper(".swiper-special-thumb", {
-//   slidesPerView: 3,
-//   spaceBetween: 10,
-//   loop: false,
-//   autoplay: {
-//     delay: 5000,
-//     disableOnInteraction: false,
-//   },
-//   breakpoints: {
-//     450: {
-//       slidesPerView: 4,
-//     },
-//     575: {
-//       slidesPerView: 4,
-//     },
-//     768: {
-//       slidesPerView: 4,
-//     },
-//     992: {
-//       slidesPerView: 4,
-//     },
-//     1200: {
-//       slidesPerView: 5,
-//     },
-//   },
-// });
+const swiperBlogs = new Swiper(".swiper-blogs", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  loop: false,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 2,
+    },
+    575: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+});

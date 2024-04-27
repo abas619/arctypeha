@@ -1,0 +1,48 @@
+/*#region ----------------- Progress Bars */
+
+.progress-bar-container {
+  background-color: $background_grey;
+  height: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .progress-bar {
+    background-color: $secondary;
+    height: 100%;
+    width: 0%;
+  }
+}
+
+.progress-horizontal {
+  background-color: $background_grey;
+  overflow: hidden;
+  width: 80px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+  .progress-bar {
+    background-color: #000;
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.3s ease;
+    border-radius: 8px 8px 0 0;
+  }
+  &.color-red {
+    .progress-bar {
+      background-color: $error;
+    }
+  }
+  &.color-yellow {
+    .progress-bar {
+      background-color: gold;
+    }
+  }
+  &.color-green {
+    .progress-bar {
+      background-color: $success;
+    }
+  }
+}
+
+/*#endregion -------------- Progress Bars */
