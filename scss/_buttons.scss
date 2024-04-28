@@ -1,7 +1,7 @@
 /*#region ----------------- Buttons */
 .btn {
   font-size: 1rem;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 4px;
   border: 2px solid transparent;
   box-shadow: none;
@@ -36,7 +36,7 @@
   .mdi {
     position: absolute;
     right: 0.86rem;
-    top: 2px;
+    top: 0;
   }
 }
 .icon-left {
@@ -44,7 +44,7 @@
   .mdi {
     position: absolute;
     left: 0.86rem;
-    top: 2px;
+    top: 0;
   }
 }
 

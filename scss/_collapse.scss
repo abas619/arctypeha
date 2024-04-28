@@ -100,12 +100,26 @@
 @media (max-width: 768px) {
   .collapse-item {
     .result-info {
-      grid-template-columns: 100%;
+      grid-template-columns: 180px auto;
       .image-content {
-        margin-top: 15px;
+        @include imgContainer(200px, 0);
       }
       .progress-content {
-        padding-left: 0;
+        // padding-left: 0;
+        padding: 10px;
+      }
+      .progress-horizontal {
+        width: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .collapse-item {
+    .result-info {
+      grid-template-columns: 150px auto;
+      .progress-horizontal {
+        width: 30px;
       }
     }
   }

@@ -3,6 +3,7 @@
   margin: 70px 0;
 }
 .card-blog {
+  padding-bottom: 10px;
   .card-inner {
     display: block;
   }
@@ -36,6 +37,32 @@
       color: $textGrey;
       margin-bottom: 0;
       @include textTruncate(2);
+    }
+  }
+  .see-more {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: $textGrey;
+    .mdi {
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+    }
+  }
+  &.mini {
+    .card-inner {
+      border: 1px solid $borderColor;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .info {
+      margin: 0;
+      .name {
+        font-size: 16px;
+        @include textTruncate(2);
+        height: 45px;
+      }
     }
   }
   &:hover {

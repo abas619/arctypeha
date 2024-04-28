@@ -16,13 +16,14 @@
     top: 20px;
   }
   .inner {
-    background-color: white;
+    background-color: rgba($color: white, $alpha: 0.5);
     border-radius: 8px;
     box-shadow: $boxshadow;
     display: grid;
     grid-template-columns: 120px 1fr auto;
     align-items: center;
     padding: 15px 30px;
+    backdrop-filter: blur(10px);
   }
   .nav-logo {
     a {

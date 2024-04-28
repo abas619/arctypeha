@@ -18,8 +18,8 @@ const swiperHome = new Swiper(".swiper-home", {
   },
 });
 
-const swiperBlogs = new Swiper(".swiper-blogs", {
-  slidesPerView: 2,
+const swiperBlogsMini = new Swiper(".swiper-blogs-mini", {
+  slidesPerView: 1,
   spaceBetween: 20,
   loop: false,
   autoplay: {
@@ -28,19 +28,19 @@ const swiperBlogs = new Swiper(".swiper-blogs", {
   },
   breakpoints: {
     450: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     575: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     992: {
       slidesPerView: 3,
     },
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
   },
 });
