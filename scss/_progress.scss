@@ -19,6 +19,7 @@
   height: 120px;
   margin: 0 auto;
   position: relative;
+  border-radius: 8px;
   .progress-bar {
     background-color: #000;
     width: 100%;
@@ -26,7 +27,7 @@
     position: absolute;
     bottom: 0;
     transition: height 0.3s ease;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
   }
   &.color-red {
     .progress-bar {
