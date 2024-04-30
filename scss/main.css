@@ -308,15 +308,15 @@ input[type=number] {
   top: 20px;
 }
 .mynavbar .inner {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.12);
   display: grid;
   grid-template-columns: 120px 1fr auto;
   align-items: center;
   padding: 15px 30px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
 }
 .mynavbar .nav-logo a {
   display: block;
@@ -1323,9 +1323,9 @@ input[type=number] {
   z-index: 998;
 }
 .bottom-buttons-action .inner {
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
@@ -1393,20 +1393,29 @@ input[type=number] {
   }
 }
 @media (max-width: 575px) {
+  .bottom-buttons-action .inner {
+    padding: 10px;
+  }
   .bottom-buttons-action .inner .btn {
-    font-size: 12px;
-    padding: 8px 10px;
-    flex: 0 0 33.33%;
-    width: 33.33%;
+    padding: 3px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .bottom-buttons-action .inner .btn .mdi {
-    font-size: 1.25rem;
+    font-size: 24px;
+    position: relative;
+    top: 1px;
+    right: 1px;
+    display: block;
+  }
+  .bottom-buttons-action .inner .btn span {
+    display: none;
   }
   .bottom-buttons-action .inner .btn.icon-right {
-    padding-right: 2.2rem !important;
-  }
-  .bottom-buttons-action .inner .btn.icon-right .mdi {
-    right: 0.56rem;
+    padding-right: 0 !important;
   }
 }
 @media (max-width: 450px) {

@@ -222,8 +222,8 @@
   width: 100%;
   z-index: 998;
   .inner {
-    background-color: rgba($color: white, $alpha: 0.5);
-    backdrop-filter: blur(10px);
+    background-color: rgba($color: white, $alpha: 0.2);
+    backdrop-filter: blur(12px);
     box-shadow: 0 -8px 20px rgba($color: #000000, $alpha: 0.1);
     padding: 15px;
     text-align: center;
@@ -303,19 +303,24 @@
 @media (max-width: 575px) {
   .bottom-buttons-action {
     .inner {
+      padding: 10px;
       .btn {
-        font-size: 12px;
-        padding: 8px 10px;
-        flex: 0 0 33.33%;
-        width: 33.33%;
+        padding: 3px;
+        width: 40px;
+        height: 40px;
+        @include displayFlex(flex, center, center);
         .mdi {
-          font-size: 1.25rem;
+          font-size: 24px;
+          position: relative;
+          top: 1px;
+          right: 1px;
+          display: block;
+        }
+        span {
+          display: none;
         }
         &.icon-right {
-          padding-right: 2.2rem !important;
-          .mdi {
-            right: 0.56rem;
-          }
+          padding-right: 0 !important;
         }
       }
     }
